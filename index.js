@@ -1,11 +1,13 @@
 // Richiede Express
 
 var express = require("express");
+var bodyParser = require("body-parser");
 var todoController = require("./controllers/todoController");
+var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 var app = express();
 
-// EJS template engine
+// Set up EJS template engine
 
 app.set("view engine", "ejs");
 
